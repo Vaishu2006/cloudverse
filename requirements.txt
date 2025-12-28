@@ -1,0 +1,18 @@
+# The code for the donwload of pdf2image package
+
+!apt-get update
+!apt-get install -y poppler-utils
+
+# Install the Python library
+!pip install pdf2image
+
+from pdf2image import convert_from_path
+
+
+# code for the uploading a file in the google collab
+
+from google.colab import files
+uploaded = files.upload()
+
+for name, file in uploaded.items():
+    print(name, len(file), "bytes")
